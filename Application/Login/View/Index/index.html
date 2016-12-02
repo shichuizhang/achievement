@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <link href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.css" rel="stylesheet"
+          type="text/css">
+    <style>
+        .header{
+            text-align: center;
+            margin-top: 10px;
+        }
+        body{
+            font-family: 微软雅黑;
+        }
+        .full{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-12"><h1>任务系统</h1></div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form role="form" action="/Login/Index/login" method="post">
+                    <div class="form-group"><label class="control-label" >用户名</label>
+                        <input class="form-control"  placeholder="请输入你的用户名" type="text" name="username">
+                    </div>
+                    <div class="form-group"><label class="control-label">密码</label>
+                        <input class="form-control"  placeholder="请输入你的密码" type="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-default full" style="background: #5DD448;color: white;">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

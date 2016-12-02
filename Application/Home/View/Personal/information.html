@@ -1,0 +1,143 @@
+<extend name="Base/base"/>
+
+<block name="title">
+    <title>个人资料</title>
+</block>
+
+<block name="css-js">
+    <style>
+        .headimg img {
+            display: block;
+            width: 75px;
+            border-radius: 50%;
+            border: 2px solid #B8B4B4;
+            margin-left: 40%;
+            height: auto;
+        }
+
+        .achievement {
+            text-align: center;
+        }
+        .selects{
+            margin-bottom:10px;
+        }
+
+         .btn-upload {
+             width: 106px;
+             height: 32px;
+             position: relative;
+             margin-bottom: 10px;
+         }
+        .btn-upload a {
+            display: block;
+            width: 104px;
+            line-height: 18px;
+            padding: 6px 0;
+            text-align: center;
+            color: #4c4c4c;
+            background: #fff;
+            border: 1px solid #cecece;
+        }
+        .btn-upload input {
+            width: 106px;
+            height: 32px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .icon-upload {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+
+            vertical-align: middle;
+            margin-right: 5px;
+            background-position: -144px -24px;
+        }
+
+    </style>
+</block>
+<block name="main">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal" role="form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div class="col-sm-2"><label class="control-label">昵称</label></div>
+                            <div class="col-sm-10"><input type="text" class="form-control"  name="nickname"
+                                                          placeholder="昵称"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><label class="control-label">头像</label></div>
+                            <div class="col-sm-10">
+                                <div class="control-group js_uploadBox">
+                                    <div class="btn-upload">
+                                    <a href="javascript:void(0);"><i class="icon-upload-alt"></i><span class="js_uploadText">上传</span>图片</a>
+                                    <input class="js_upFile" type="file" name="headimgurl">
+                                 </div>
+
+                                        <div class="js_showBox ">
+                                            <img class="js_logoBox" src="/Public/Home/img/head.jpg" width="100px" >
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><label class="control-label">手机</label></div>
+                            <div class="col-sm-10"><input type="text" class="form-control" name="phone"
+                                                          placeholder="请输入手机号码"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><label class="control-label">性别</label></div>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="type">
+                                    <option value="">请选择类型</option>
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+                                    <option value="3">保密</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default form-control">保存</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="bottom-js">
+    <script  type="text/javascript"  src="/Public/Home/js/jquery.uploadView.js"></script>
+
+    <script>
+        $(".js_upFile").uploadView({
+            uploadBox: '.js_uploadBox',//设置上传框容器
+            showBox : '.js_showBox',//设置显示预览图片的容器
+            width : 100, //预览图片的宽度，单位px
+            height : 100, //预览图片的高度，单位px
+            allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+            maxSize :2, //允许上传图片的最大尺寸，单位M
+            success:function(e){
+                $(".js_uploadText").text('更改');
+                alert('图片上传成功');
+            }
+        });
+    </script>
+</block>
+
+
+
+

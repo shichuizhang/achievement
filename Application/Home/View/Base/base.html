@@ -1,0 +1,92 @@
+<extend name="base.html"/>
+<html>
+<head>
+    <block name="title">
+
+    </block>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet"
+          type="text/css">
+    <style>
+        body {
+            font-family: 微软雅黑;
+        }
+
+        .footer-div {
+            background: #F8F8F8;
+            position: fixed;
+            bottom: 0;
+            overflow: hidden;
+            width: 100%;
+            left: 5%;
+            text-align: center;
+        }
+        .bottom-blank{
+            height:60px;
+        }
+    </style>
+
+    <block name="css-js">
+
+    </block>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse"><span
+                    class="sr-only"></span><span class="icon-bar"></span><span class="icon-bar"></span><span
+                    class="icon-bar"></span></button>
+            <a class="navbar-brand" href="#"><span></span></a></div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">任务</a></li>
+                <li><a href="#">新增</a></li>
+                <li><a href="#">个人</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<block name="main">
+
+</block>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bottom-blank">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section">
+                    <div class="container">
+                        <div class="row footer-div">
+                            <div class="col-xs-3"><a href="/Home/index/index"><i class="fa fa-3x fa-fw fa-home"></i>首页</a></div>
+                            <div class="col-xs-3"><a href="/Home/mission/index"><i class="fa fa-3x fa-check-square fa-fw"></i>任务</a></div>
+                            <div class="col-xs-3"><a href="/Home/mission/add"><i class="fa fa-3x fa-plus fa-fw"></i>新增</a></div>
+                            <div class="col-xs-3"><a href="/Home/personal/index"><i class="fa fa-3x fa-user fa-fw"></i>个人</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<block name="bottom-js">
+
+</block>
+</body>
+</html>

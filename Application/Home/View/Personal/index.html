@@ -1,0 +1,84 @@
+<extend name="Base/base"/>
+
+<block name="title">
+    <title>首页</title>
+</block>
+
+<block name="css-js">
+    <style>
+        .pull-left img{
+            border-radius: 50%;
+            border: 1px solid;
+        }
+        .media-body h4{
+            line-height: 30px;
+        }
+        .logout{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</block>
+<block name="main">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="media-list">
+                        <li class="media"><a class="pull-left" href="#"><img class="media-object"
+                                                                             src="/Public/Home/img/headimg.png"
+                                                                             height="64" width="64"></a>
+
+                            <div class="media-body"><h4 class="media-heading">矢吹丈</h4>
+                                <p>分数：10</p>
+                            </div>
+                        </li>
+                        <li class="media"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/Home/Personal/information">修改个人资料</a></li>
+                        <li class="list-group-item"><a href="/Home/Personal/password">修改密码</a></li>
+                        <li class="list-group-item"><a href="/Home/Personal/myMission">我的任务列表</a></li>
+                        <li class="list-group-item">审核列表</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item">进行中的任务列表</li>
+                        <li class="list-group-item">附近的任务列表</li>
+                        <li class="list-group-item">已完成的任务列表</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item logout">退出</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+

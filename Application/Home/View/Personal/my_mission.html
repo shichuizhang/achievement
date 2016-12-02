@@ -1,0 +1,50 @@
+<extend name="Base/base"/>
+
+<block name="title">
+    <title>首页</title>
+</block>
+
+<block name="css-js">
+    <style>
+        .headimg img {
+            display: block;
+            width: 75px;
+            border-radius: 50%;
+            border: 2px solid #B8B4B4;
+            margin-left: 40%;
+            height: auto;
+        }
+
+        .achievement {
+            text-align: center;
+        }
+    </style>
+</block>
+<block name="main">
+    <volist name="missionList" id="vo">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <ul class="media-list">
+                                <li class="media"><a class="pull-left" href="/Home/Personal/missionDetail/id/{$vo.id}"><img class="media-object"
+                                                                                                        src="{$vo.pic_url}"
+                                                                                                        height="64" width="64"></a>
+
+                                    <div class="media-body"><h4 class="media-heading">{$vo.name}（{$vo.score}）</h4>
+
+                                        <p>{$vo.desc}</p></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </volist>
+</block>
+
+
